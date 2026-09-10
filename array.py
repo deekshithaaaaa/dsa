@@ -264,3 +264,137 @@ arr[len(arr)-1]=second
 arr[len(arr)-2]=first
 print(arr)
        
+arr = [5, 10, 15, 20, 25]
+first=arr[len(arr)-1]
+for i in range(len(arr)-1,0,-1):
+    arr[i]=arr[i-1]
+arr[0]=first
+print(arr)
+
+arr = [10, 20, 30, 40, 50]
+k = 3
+for j in range(k):
+    first = arr[0]
+    for i in range(len(arr)-1):
+        arr[i]=arr[i+1]
+    arr[-1]=first
+print(arr)
+
+arr = [5, 10, 15, 20, 25]
+k = 2
+for j in range(k):
+    first=arr[0]
+    for i in range(len(arr)-1):
+        arr[i]=arr[i+1]
+    arr[-1]=first
+print(arr)
+
+arr = [5, 10, 15, 20, 25]
+k = 2
+for j in range(k):
+    last=arr[-1]
+    for i in range(len(arr)-1,0,-1):
+        arr[i]=arr[i-1]
+    arr[0]=last
+print(arr)
+
+arr = [2, 3, 2, 5, 3, 2]
+freq={}
+for i in arr:
+    if i in freq:
+        freq[i]+=1
+    else:
+        freq[i]=1
+print(freq)
+
+arr = [4, 2, 4, 7, 4, 2, 9]
+freq={}
+for i in arr:
+    if i in freq:
+        freq[i]+=1
+    else:
+        freq[i]=1
+print(freq[4])
+
+arr = [5, 2, 5, 3, 2, 5, 3]
+freq={}
+for i in arr:
+    if i in freq:
+        freq[i]+=1
+    else:
+        freq[i]=1
+print(freq)
+
+arr = [2, 5, 3, 2, 7, 5, 8]
+freq={}
+for i in arr:
+    if i in freq:
+        freq[i]+=1
+    else:
+        freq[i]=1
+for i in freq:
+    if freq[i]>1:
+        print(i)
+
+arr = [2, 5, 3, 2, 7, 5, 8]
+a=[]
+for i in arr:
+    if i not in a:
+        a.append(i)
+print(a)
+
+arr = [1, 2, 4, 5]
+missing=0
+for i in range(len(arr)):
+    if arr[i]!=i+1:
+        missing=i+1
+        break
+print(missing)
+
+arr = [2, 7, 11, 15]
+target = 9
+for i in range(len(arr)):
+    if arr[i]+arr[i+1]==target:
+        print(arr[i],arr[i+1])
+        break
+
+arr = [2, 11, 7, 15]
+target = 9
+for i in range (len(arr)):
+    for j in range (i+1,len(arr)):
+        if arr[i]+arr[j]==target:
+            print(arr[i],arr[j])
+            break
+
+arr = [3, 8, 4, 12, 6]
+target = 10
+for i in range(len(arr)):
+    for j in range(i+1,len(arr)):
+        if arr[i]+arr[j]==target:
+            print(arr[i],arr[j])
+            break
+
+arr1 = [1, 3, 5]
+arr2 = [2, 4, 6]
+for i in arr2:
+    arr1.append(i)
+print(arr1)
+
+arr1 = [1, 2, 3, 4, 5]
+arr2 = [3, 4, 5, 6, 7]
+for i in arr1:
+    if i in arr2:
+        print(i)
+
+arr1 = [1, 2, 3, 4]
+arr2 = [3, 4, 5, 6]
+for i in arr2:
+    if i not in arr1:
+        arr1.append(i)
+print(arr1)
+
+arr = [1, 2, 3]
+for i in range(len(arr)):
+    for j in range(i,len(arr)):
+        
+        print(sum(arr[i:j+1]))
