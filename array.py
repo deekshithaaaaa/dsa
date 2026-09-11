@@ -398,3 +398,60 @@ for i in range(len(arr)):
     for j in range(i,len(arr)):
         
         print(sum(arr[i:j+1]))
+
+arr = [1, 3, 2, 4]
+a=[]
+total=0
+for i in range(len(arr)):
+    total=arr[i]+total
+    a.append(total)
+print(a)
+
+arr = [2, 4, 3, 5, 6]
+a=[]
+total=0
+for i in range(len(arr)):
+    total=arr[i]+total
+    a.append(total)
+left=1
+right=3
+sum=a[right]-a[left-1]
+print(sum)
+
+arr = [5, 2, 7, 3, 6]
+a=[]
+total=0
+for i in range(len(arr)):
+    total=arr[i]+total
+    a.append(total)
+left = 2
+right = 4
+summ=a[right]-a[left-1]
+print(summ)
+
+arr = [-2, 3, -1, 5]
+cur_sum=0
+max_sum=0
+
+for i in range(len(arr)):
+   cur_sum=max(arr[i],arr[i]+cur_sum)
+   max_sum=max(max_sum,cur_sum)
+print(max_sum)
+         
+arr = [-5, 2, -1, 3, -2, 4, -10]
+cur_sum=0
+max_sum=0
+for i in range(len(arr)):
+    cur_sum=max(arr[i],arr[i]+cur_sum)
+    max_sum=max(max_sum,cur_sum)
+print(max_sum)
+
+arr = [2, 5, 1, 4, 3]
+k = 3
+
+window_sum = 0
+for i in range(k):
+    window_sum=arr[i]+window_sum
+print(window_sum)
+
+
