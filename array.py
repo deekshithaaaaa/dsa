@@ -455,3 +455,115 @@ for i in range(k):
 print(window_sum)
 
 
+arr = [4, 2, 7, 1, 6, 3]
+k = 3
+window_sum=0
+for i in range(k):
+    window_sum=window_sum+arr[i]
+max_sum=window_sum
+for i in range(len(arr)-k):
+    window_sum=window_sum-arr[i]+arr[i+k]
+    max_sum=max(max_sum,window_sum)
+print(max_sum)
+
+arr = [5, 2, 8, 1, 4, 3]
+k = 3
+cur_sum=0
+for i in range(k):
+    cur_sum=arr[i]+cur_sum
+min_sum=cur_sum
+for i in range(len(arr)-k):
+    cur_sum=cur_sum-arr[i]+arr[i+k]
+    min_sum=min(min_sum,cur_sum)
+print(min_sum)
+
+arr = [1, 2, 4, 6, 8, 9]
+target = 10
+left=0
+right=len(arr)-1
+while left<right:
+    total=arr[left]+arr[right]
+    if total==target:
+        print(arr[left],arr[right])
+        break
+    elif target>total:
+        left+=1
+    else:
+        right-=1
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+target = 9
+left=0
+right=len(arr)-1
+while left<right:
+    total=arr[left]+arr[right]
+    if total==target:
+        print(arr[left],arr[right])
+    
+        left+=1
+    
+        right-=1
+    elif total<target:
+        left+=1
+    else:
+        right-=1
+
+arr = [1, 1, 2, 2, 3, 4, 4, 5]
+a=[]
+for i in arr:
+    if i not in a:
+        a.append(i)
+print(a)
+
+arr = [1, 1, 3, 3, 5, 5, 7, 8, 8]
+left=0
+for right in range(1,len(arr)):
+    if arr[left]!=arr[right]:
+        left+=1
+        arr[left]=arr[right]
+print(arr[:left + 1])
+
+arr = [0, 1, 0, 3, 12]
+left=0
+for right in range(1,len(arr)):
+    if arr[right]!=0:
+        left+=1
+        arr[left], arr[right] = arr[right], arr[left]
+        print(arr)
+        
+arr = [0, 2, 0, 5, 0, 7, 8]
+left=0
+for right in range(1,len(arr)):
+    if arr[right]!=0:
+        left+=1
+        arr[left],arr[right]=arr[right],arr[left]
+print(arr)
+
+
+arr = [1, -2, 3, -4, 5, -6]
+left=0
+for right in range(1,len(arr)):
+    if arr[right]<0:
+        left+=1
+        arr[left],arr[right]=arr[right],arr[left]
+        print(arr)
+
+arr = [1, 2, 3, 4, 5, 6]
+left=0
+right=len(arr)-1
+while left < right:
+    arr[left],arr[right]=arr[right],arr[left]
+    left+=1
+    right-=1
+print(arr)
+
+arr = [1, 3, 5, 7, 9]
+target = 4
+left=0
+right=1
+while left<right:
+    if arr[right]-arr[left]==target:
+        print(arr[right],arr[left])
+        right+=1
+    else:
+        left+=1
